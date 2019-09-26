@@ -3,26 +3,35 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-class Square extends React.Component {
-    // Delete the constructor from Square because Square no longer keeps track of the game’s state
-    // constructor(props) {
-    //     super(props);
+// class Square extends React.Component {
+//     // Delete the constructor from Square because Square no longer keeps track of the game’s state
+//     // constructor(props) {
+//     //     super(props);
 
-    //     this.state = {
-    //         value: null
-    //     }
-    // }
+//     //     this.state = {
+//     //         value: null
+//     //     }
+//     // }
 
-    render() {
-        return (
-            <button 
-                className="square" 
-                onClick={() => this.props.onClick()}
-            >
-                {this.props.value}
-            </button>
-        );
-    }
+//     render() {
+//         return (
+//             <button 
+//                 className="square" 
+//                 onClick={() => this.props.onClick()}
+//             >
+//                 {this.props.value}
+//             </button>
+//         );
+//     }
+// }
+
+// change Square to function component
+function Square(props) {
+    return (
+        <button className="square" onClick={() => props.onClick()}>
+            {props.value}
+        </button>
+    );
 }
   
 class Board extends React.Component {
